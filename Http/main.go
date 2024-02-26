@@ -18,6 +18,10 @@ func main() {
 	// fmt.Println(resp)
 	lw := logWriter{}
 	io.Copy(lw, resp.Body)
+	// bs := make([]byte, 99999)
+	// resp.Body.Read(bs)
+	// fmt.Println(string(bs))
+	// io.Copy(os.Stdout, resp.Body)
 }
 
 func (logWriter) Write(bs []byte) (int, error) {
