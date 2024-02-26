@@ -16,7 +16,10 @@ type bot interface {
 }
 
 func main() {
-
+	t := triangle{10, 8}
+	s := square{10}
+	printArea(t)
+	printArea(s)
 }
 
 func (s square) getArea() float64 {
